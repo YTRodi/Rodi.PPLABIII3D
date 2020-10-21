@@ -1,0 +1,231 @@
+:root {
+    --border-radius5: 5px;
+    --color-boton: #333;
+    --color-principal: #30BFF2;
+    --color-secundario:#F23D67;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: .09em;
+}
+
+/* -------------------------------------------------------- */
+/* TABLA */
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    background-color: var( --color-principal );
+    text-transform: uppercase;
+}
+
+tr {
+    transition: background-color 0.25s;
+}
+
+tr:hover {
+    cursor: pointer;
+    background-color: var( --color-secundario );
+    color: #FFF;
+}
+
+th, td {
+    padding: 7px;
+}
+
+table, th, td {
+    border: 2px solid var( --color-boton );
+}
+
+/* -------------------------------------------------------- */
+/* IMPORTANTE:
+    MODELO => MOBILE FIRST 
+*/
+
+/* HEADER es el contenedor del logo y el nav */
+header, footer {    
+    width: 100%;
+    height: 100%;
+    background-color: var( --color-principal );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    background-color: var( --color-boton );
+    /* Top y bottom: 10px // Left y right 20px */
+    padding: 8px 16px;
+    border-radius: var( --border-radius5 );
+    transition: background-color 0.25s;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+nav a:hover {
+    cursor: pointer;
+    color: #FFF;
+    background-color: var( --color-secundario );
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav li {
+    margin: 10px 10px;
+}
+
+/* FOOTER */
+footer p {
+    color: white;
+    font-weight: bold;
+}
+
+/* MEDIA QUERYS */
+/* Nos movemos desde lo más chico a lo más grande */
+@media ( min-width: 800px ) {
+    header, footer {    
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100px;
+    }
+}
+
+/* -------------------------------------------------------- */
+/* FORMULARIO */
+body {
+    font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+    /* padding: 50px 0; */
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+main {
+    /* El contenido principal va a tener un factor de crecimiento 1, osea que es más que los demás ( que por default es 0 ) */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex-outer,
+.flex-inner {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flex-outer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-inner {
+    padding: 0 8px;
+    justify-content: space-between;
+}
+
+.flex-outer > li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+    padding: 8px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+    border-radius: 15px;
+    flex: 1 0 120px;
+    max-width: 200px;
+}
+
+.flex-outer > li > label + *,
+.flex-inner {
+    flex: 1 0 220px;
+}
+
+.flex-outer li p {
+    margin: 0;
+}
+
+.flex-outer li input:not([type='radio']) {
+    padding: 10px;
+    /* border: none; */
+    border-radius: var( --border-radius5 );
+    font-size: 0.7em;
+}
+
+.flex-outer li button {
+    margin: 10px auto;
+    padding: 8px 16px;
+    border: none;
+    background: #333;
+    color: #FFF;
+    text-transform: uppercase;
+    border-radius: var( --border-radius5 );
+    transition: background-color 0.25s;
+}
+
+.flex-outer li button:hover {
+    cursor: pointer;
+    background-color: var( --color-secundario );
+}
+
+.flex-inner li {
+    width: 150px;
+}
+
+/* -------------------------------------------------------- */
+/* Clase para ocultar botones */
+.desaparecer {
+    display: none;
+}
+
+#form-principal {
+    width: 500px;
+}
+
+.importante {
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+}
+
+#img-principal {
+    width: 100%;
+}
+
+#btnAlta {
+    background-color: green;
+}

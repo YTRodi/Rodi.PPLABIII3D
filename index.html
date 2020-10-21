@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/main.js" type="module"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous"
+    />
+
+    <title>PP Lab III</title>
+</head>
+<body>
+
+    <header>
+        <a href="./index.html"><img src="./logo.png" width="200px" alt="Logo"></a>
+
+        <nav>
+            <ul>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Anuncios</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <p>
+        <h1 class="importante">Administración</h1>
+        <img id="img-principal" src="./img/concesionaria.jpg" alt="Imagen concesionaria de autos">
+        <br>
+    </p>
+
+
+    <main>
+        <section class="container" id="dataIn">
+            <form id="form-principal">
+                <fieldset>
+                    <legend>Información del anuncio</legend>
+
+                    <ul class="flex-outer">
+                        <!-- li (Id) -->
+                        <li>
+                            <label class="desaparecer" for="txtId" id="labelId">Id</label>
+                            <input class="desaparecer" type="text" name="id" id="txtId" disabled>
+                        </li>
+        
+                        <!-- li (Titulo) -->
+                        <li>
+                            <label for="txtTitulo">Titulo</label>
+                            <input type="text" name="titulo" id="txtTitulo" required placeholder="Titulo">
+                        </li>
+        
+                        <!-- li (Transaccion) -->
+                        <li>
+                            <p>Transaccion</p>
+                            <ul class="flex-inner">
+                                <li>
+                                    <input type="radio" name="transaccion" id="rdoV" value="Venta" checked>Venta
+                                </li>
+                                <li>
+                                    <input type="radio" name="transaccion" id="rdoA" value="Alquiler">Alquiler
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <!-- li (Descripción) -->
+                        <li>
+                            <label for="txtDescripcion">Descripción</label>
+                            <input type="text" name="descripcion" id="txtDescripcion" required placeholder="Descripción">
+                        </li>
+
+                        <!-- li (Precio) -->
+                        <li>
+                            <label for="numbPrecio">Precio</label>
+                            <input type="number" name="precio" id="numbPrecio" required placeholder="Precio">
+                        </li>
+
+                        <!-- li (Puertas) -->
+                        <li>
+                            <label>
+                                <img src="./img/door_car.ico" alt="Imagen puertas del auto" width="35px">
+                            </label>
+                            <input type="number" name="puertas" id="numbPuertas" required placeholder="Puertas">
+                        </li>
+
+                        <!-- li (KMs) -->
+                        <li>
+                            <label>
+                                <img src="./img/kmcar.ico" alt="Imagen kms del auto" width="35px">
+                            </label>
+                            <input type="number" name="kms" id="numbKMs" required placeholder="KMs">
+                        </li>
+
+                        <!-- li (Potencia) -->
+                        <li>
+                            <label>
+                                <img src="./img/carbattery.ico" alt="Imagen kms del auto" width="35px">
+                            </label>
+                            <input type="number" name="potencia" id="numbPotencia" required placeholder="Potencia">
+                        </li>
+
+
+                        <li>
+                            <button id="btnAlta">
+                                <i style="color: white;" class="fa fa-floppy-o fa-lg" aria-hidden="true"></i>
+                                Guardar
+                            </button>
+                            <button class="desaparecer" id="btnBaja">Baja Anuncio</button>
+                            <button class="desaparecer" id="btnModif">Modificar Anuncio</button>
+                            <button id="btnCancelar">Cancelar</button>
+                            <button id="btnLimpiarTabla">Limpiar Tabla</button>
+                        </li>
+                    </ul>
+
+                </fieldset>
+    
+            </form>
+        </section>
+    
+        <br><br>
+    
+    
+        <section class="container">
+            <div id="divTabla">
+    
+            </div>
+        </section>
+
+        <br>
+        <br>
+    </main>
+    
+
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Anuncios</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <p>
+            Todos los derechos reservados 2020 &copy
+        </p>
+    </footer>
+
+</body>
+</html>
